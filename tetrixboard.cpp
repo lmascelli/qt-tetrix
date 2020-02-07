@@ -275,5 +275,3 @@ void TetrixBoard::keyPressEvent(QKeyEvent *event) {
         QFrame::keyPressEvent(event);
     }
 }
-
-
