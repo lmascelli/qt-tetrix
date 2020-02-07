@@ -8,7 +8,11 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+<<<<<<< HEAD
 set(CMAKE_CXX_STANDARD 14)
+=======
+set(CMAKE_CXX_STANDARD 20)
+>>>>>>> new
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # QtCreator supports the following variables for Android, which are identical to qmake Android variables.
@@ -31,12 +35,16 @@ if(ANDROID)
     main.cpp
     tetrix.cpp
     tetrix.h
+    tetrixpiece.cpp
+    tetrixboard.cpp
   )
 else()
   add_executable(tetrix
     main.cpp
     tetrix.cpp
     tetrix.h
+    tetrixpiece.cpp
+    tetrixboard.cpp
   )
 endif()
 
