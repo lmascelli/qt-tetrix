@@ -31,12 +31,16 @@ if(ANDROID)
     main.cpp
     tetrix.cpp
     tetrix.h
+    tetrixpiece.cpp
+    tetrixboard.cpp
   )
 else()
   add_executable(tetrix
     main.cpp
     tetrix.cpp
     tetrix.h
+    tetrixpiece.cpp
+    tetrixboard.cpp
   )
 endif()
 
