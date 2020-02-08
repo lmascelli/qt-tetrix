@@ -5,6 +5,7 @@ Tetrix::Tetrix(QWidget *parent) : QWidget(parent), board(new TetrixBoard) {
   nextPieceLabel->setFrameStyle(QFrame::Box | QFrame::Raised);
   nextPieceLabel->setAlignment(Qt::AlignCenter);
   board->setNewPieceLabel(nextPieceLabel);
+
   scoreLcd = new QLCDNumber(5);
   levelLcd = new QLCDNumber(QLCDNumber::Filled);
   linesLcd = new QLCDNumber;
@@ -24,7 +25,7 @@ Tetrix::Tetrix(QWidget *parent) : QWidget(parent), board(new TetrixBoard) {
 
   QGridLayout *layout = new QGridLayout;
   layout->addWidget(createLabel("NEXT"), 0, 0);
-  //  layout->addWidget(nextPieceLabel, 1, 0);
+  layout->addWidget(nextPieceLabel, 1, 0);
   layout->addWidget(createLabel("LEVEL"));
   layout->addWidget(levelLcd, 3, 0);
   layout->addWidget(startButton, 4, 0);
@@ -46,6 +47,6 @@ Tetrix::~Tetrix() {}
 
 QLabel *Tetrix::createLabel(const QString &text) {
     QLabel *label = new QLabel(text);
-    //    label->setAlignment(Qt::AlignHCenter | Qt::AlignBottom);
+    label->setAlignment(Qt::AlignHCenter | Qt::AlignBottom);
     return label;
 }
